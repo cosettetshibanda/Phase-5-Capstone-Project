@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
 
+  resources :topics
   resources :answers
   resources :questions
   post "/signup", to: "users#create"
