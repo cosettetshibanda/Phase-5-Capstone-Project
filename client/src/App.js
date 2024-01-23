@@ -6,6 +6,7 @@ import { fetchUser } from './Features/usersSlice';
 import UserInput from './Features/UserInput';
 import Home from './Components/Home';
 import LoginForm from './Components/LoginForm';
+import NavBar from './Components/NavBar';
 import { useEffect } from 'react';
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
     dispatch(fetchUser())
   },[dispatch])
 
-  
+
   return (
     <Router>
       <div id='container'>
