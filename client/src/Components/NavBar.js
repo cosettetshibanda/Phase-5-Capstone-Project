@@ -13,22 +13,18 @@ function NavBar(){
 
     return(
         <div id='nav'>
-        <Username />
         {(user && !user.errors) ? (
           <div>
             <p>
+              <h3>Welcome {user.username}</h3>
               <Link id='linkStyles' className='link' to="/" >Home</Link>
               <button onClick={handleLogoutClick}>Log Out</button>
             </p>
           </div>
         ) : (
           <div>
-            {!(window.location.href.indexOf("/login") > -1) ? (
               <Link id='linkStyles' onClick={() => dispatch(reset())} to='/login'>Login</Link>
-            ) : (null)}
-             {!(window.location.href.indexOf("/signup") > -1) ? (
               <Link id='linkStyles' onClick={() => dispatch(reset())} to='signup'>Signup</Link>
-            ) : (null)}
           </div>
         )}
       </div>
